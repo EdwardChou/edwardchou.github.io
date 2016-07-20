@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
+  <title>Edward</title>
+  <subtitle>Technology Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://edwardchou.github.io/"/>
   <updated>2016-07-20T13:58:14.650Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://edwardchou.github.io/</id>
   
   <author>
-    <name>John Doe</name>
-    
+    <name>Edward Chou</name>
+    <email>edwardchouxz@foxmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2016/07/20/hello-world/"/>
-    <id>http://yoursite.com/2016/07/20/hello-world/</id>
+    <link href="http://edwardchou.github.io/2016/07/20/hello-world/"/>
+    <id>http://edwardchou.github.io/2016/07/20/hello-world/</id>
     <published>2016-07-20T13:58:14.650Z</published>
     <updated>2016-07-20T13:58:14.650Z</updated>
     
