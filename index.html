@@ -178,7 +178,7 @@
 <p><strong>特点：</strong></p>
 <ul>
 <li>下降初期时，使用上一次参数更新，下降方向一致，乘上较大的μ能够进行很好的加速</li>
-<li>下降中后期时，在局部最小值来回震荡的时候，<img src="https://zhihu.com/equation?tex=gradient%5Cto0" alt="alt text">，<img src="https://zhihu.com/equation?tex=%5Cmu" alt="alt text">使得更新幅度增大，跳出陷阱</li>
+<li>下降中后期时，在局部最小值来回震荡的时候，<img src="https://zhihu.com/equation?tex=gradient%5Cto0" alt="alt text">，μ使得更新幅度增大，跳出陷阱</li>
 <li>在梯度改变方向的时候，μ能够减少更新 总而言之，momentum项能够在相关方向加速SGD，抑制振荡，从而加快收敛</li>
 </ul>
 <h2 id="Nesterov"><a href="#Nesterov" class="headerlink" title="Nesterov"></a>Nesterov</h2><p>nesterov项在梯度更新时做一个校正，避免前进太快，同时提高灵敏度。 将上一节中的公式展开可得：<br><img src="https://zhihu.com/equation?tex=%5CDelta%7B%5Ctheta_t%7D%3D-%5Ceta%2A%5Cmu%2Am_%7Bt-1%7D-%5Ceta%2Ag_t" alt="alt text"><br>可以看出，并没有直接改变当前梯度，所以Nesterov的改进就是让之前的动量直接影响当前的动量。即：<br><img src="https://zhihu.com/equation?tex=g_t%3D%5Cnabla_%7B%5Ctheta_%7Bt-1%7D%7D%7Bf%28%5Ctheta_%7Bt-1%7D-%5Ceta%2A%5Cmu%2Am_%7Bt-1%7D%29%7D" alt="alt text"> <img src="https://zhihu.com/equation?tex=m_t%3D%5Cmu%2Am_%7Bt-1%7D%2Bg_t" alt="alt text"> <img src="https://zhihu.com/equation?tex=%5CDelta%7B%5Ctheta_t%7D%3D-%5Ceta%2Am_t" alt="alt text"><br>所以，加上nesterov项后，梯度在大的跳跃后，进行计算对当前梯度进行校正。如下图：<br> <img src="https://pic4.zhimg.com/fecd469405501ad82788f068985b25cb_b.png" alt="alt text"><br>momentum首先计算一个梯度(短的蓝色向量)，然后在加速更新梯度的方向进行一个大的跳跃(长的蓝色向量)，nesterov项首先在之前加速的梯度方向进行一个大的跳跃(棕色向量)，计算梯度然后进行校正(绿色梯向量)</p>
