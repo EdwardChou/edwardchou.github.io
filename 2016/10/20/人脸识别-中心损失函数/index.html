@@ -23,10 +23,10 @@
 <meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/55c32667b2ef4c6baa228d0e799f4119_th.png">
 <meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/6ea8cd49048b483da41d089d3d77bf7f_th.jpeg">
 <meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/132a3f24a02143bcae01f33cf640a1f8.jpeg">
-<meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/132a3f24a02143bcae01f33cf640a1f8.jpeg">
+<meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/3f15c624cb5040e4a5ea80b04fb1aca7_th.jpeg">
 <meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/bd86faad91244e5182447c4398be3865_th.jpeg">
 <meta property="og:image" content="http://img.mp.itc.cn/upload/20161016/2cf0f8f155e04d689bd196976395d088_th.jpeg">
-<meta property="og:updated_time" content="2016-10-20T09:08:27.249Z">
+<meta property="og:updated_time" content="2016-10-20T09:13:47.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="人脸识别-中心损失函数">
 <meta name="twitter:description" content="本论文对人脸识别和验证任务提出一种新的损失函数，即中心损失。中心损失和softmax损失联合监督学习的CNN，其对深层学习特征的人脸识别能力大大提高。对几个&amp;gt;大型人脸基准的实验已经令人信服地证明了该方法的有效性。
@@ -221,47 +221,47 @@
 <h2 id="用LFW和YTF数据集实验"><a href="#用LFW和YTF数据集实验" class="headerlink" title="用LFW和YTF数据集实验"></a>用LFW和YTF数据集实验</h2><p>LFW和YTF中的部分人脸图像，绿色框是同个人，红色反之，白色框的人脸用于测试：<br><img src="http://img.mp.itc.cn/upload/20161016/6ea8cd49048b483da41d089d3d77bf7f_th.jpeg" alt="exp"></p>
 <h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p><img src="http://img.mp.itc.cn/upload/20161016/132a3f24a02143bcae01f33cf640a1f8.jpeg" alt="result"><br>实验中，model A是单一使用softmax损失函数监视的模型，model B是softmax损失和对比损失联合监视的模型，model C是softmax损失和中心损失联合监视的模型。实&gt;验结果显示，model C的性能比model A和modelB性能更好，在LFW和YTF中都能得到更高的准确率。</p>
 <p>用MegaFaceChallenge数据集实验</p>
-<p>MegaFace中的人脸图像样本：<br><img src="http://img.mp.itc.cn/upload/20161016/132a3f24a02143bcae01f33cf640a1f8.jpeg" alt="mega"><br>我们对使用不同方法的模型进行了人脸识别和人脸验证实验，结果如下：<br><img src="http://img.mp.itc.cn/upload/20161016/bd86faad91244e5182447c4398be3865_th.jpeg" alt="res1"><br>人脸识别任务中不同模型的正确率<br><img src="http://img.mp.itc.cn/upload/20161016/2cf0f8f155e04d689bd196976395d088_th.jpeg" alt="res2"><br>人脸验证任务中不同模型的正确率</p>
+<p>MegaFace中的人脸图像样本：<br><img src="http://img.mp.itc.cn/upload/20161016/3f15c624cb5040e4a5ea80b04fb1aca7_th.jpeg" alt="mega"><br>我们对使用不同方法的模型进行了人脸识别和人脸验证实验，结果如下：<br><img src="http://img.mp.itc.cn/upload/20161016/bd86faad91244e5182447c4398be3865_th.jpeg" alt="res1"><br>人脸识别任务中不同模型的正确率<br><img src="http://img.mp.itc.cn/upload/20161016/2cf0f8f155e04d689bd196976395d088_th.jpeg" alt="res2"><br>人脸验证任务中不同模型的正确率</p>
 <p>结果显示，使用 softmax 损失函数和中心损失函数联合监视的 model C 能得到更高的正确率。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本论文中我们对人脸识别和验证任务提出一种新的损失函数，即中心损失。中心损失和softmax损失联合监督学习的CNN，其对深层学习特征的人脸识别能力大大提高。&gt;对几个大型人脸基准的实验已经令人信服地证明了该方法的有效性。</p>
 <h2 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h2><p>这篇论文发表于2016欧洲计算机视觉大会（ECCV 2016），论文作者于10月12日和13日开源了训练模型和提取深层特征demo。</p>
 <p>开源地址：<a href="https://github.com/ydwen/caffe-face" target="_blank" rel="external">https://github.com/ydwen/caffe-face</a></p>
 <p><strong>训练模型</strong></p>
-<ol>
-<li><p>安装Caffe，请按照<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="external">安装指南</a>进行，确保在使用我们的代码前已经正确安装caffe。</p>
+<ul>
+<li><p>1.安装Caffe，请按照<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="external">安装指南</a>进行，确保在使用我们的代码前已经正确安装caffe。</p>
 </li>
-<li><p>下载人脸数据集，e.g. CAISA-WebFace,VGG-Face, MS-Celeb-1M, MegaFace.</p>
+<li><p>2.下载人脸数据集，e.g. CAISA-WebFace,VGG-Face, MS-Celeb-1M, MegaFace.</p>
 </li>
-<li><p>预处理训练人脸图像，包括检测、对齐等。这里我们强烈推荐MTCNN，它是用于人脸识别和对齐非常高效的开源工具。</p>
+<li><p>3.预处理训练人脸图像，包括检测、对齐等。这里我们强烈推荐MTCNN，它是用于人脸识别和对齐非常高效的开源工具。</p>
 </li>
-<li><p>创建训练集和验证集的列表，放到face_example /data /</p>
+<li><p>4.创建训练集和验证集的列表，放到face_example /data /</p>
 </li>
-<li><p>指定train和val的数据源</p>
+<li><p>5.指定train和val的数据源</p>
 </li>
-</ol>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">layer &#123;</div><div class="line">  name: &quot;data&quot;</div><div class="line">  type: &quot;ImageData&quot;</div><div class="line">  top: &quot;data&quot;</div><div class="line">  top: &quot;label&quot;</div><div class="line">  image_data_param &#123;</div><div class="line">    source: &quot;face_example/data/caisa_train.txt&quot;</div><div class="line">  &#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>指定FC6层的目标数量</li>
-</ol>
+<ul>
+<li>6.指定FC6层的目标数量</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">layer &#123;</div><div class="line">  name: &quot;fc6&quot;</div><div class="line">  type: &quot;InnerProduct&quot;</div><div class="line">  bottom: &quot;fc5&quot;</div><div class="line">  top: &quot;fc6&quot;</div><div class="line">  inner_product_param &#123;</div><div class="line">    num_output: 10572  &#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>指定中心损失层目标数量和损失权重</li>
-</ol>
+<ul>
+<li>7.指定中心损失层目标数量和损失权重</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">layer &#123;</div><div class="line">  name: &quot;center_loss&quot;</div><div class="line">  type: &quot;CenterLoss&quot;</div><div class="line">  bottom: &quot;fc5&quot;</div><div class="line">  bottom: &quot;label&quot;</div><div class="line">  top: &quot;center_loss&quot;</div><div class="line">  center_loss_param &#123;</div><div class="line">    num_output: 10572</div><div class="line">  &#125;</div><div class="line">  loss_weight: 0.008</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>训练模型</li>
-</ol>
-<p>提取深层特征</p>
-<ol>
-<li><p>编译及配置matcaffe</p>
+<ul>
+<li>8.训练模型</li>
+</ul>
+<p><strong>提取深层特征</strong></p>
+<ul>
+<li><p>1.编译及配置matcaffe</p>
 </li>
-<li><p>在face_example/extractDeepFeature.m中指定相应的路径</p>
+<li><p>2.在face_example/extractDeepFeature.m中指定相应的路径</p>
 </li>
-</ol>
+</ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">addpath(<span class="string">'path_to_matCaffe/matlab'</span>)</div><div class="line">model = <span class="string">'path_to_deploy/face_deploy.prototxt'</span>;</div><div class="line">weights = <span class="string">'path_to_model/face_model.caffemodel'</span>;</div><div class="line">image = imread(<span class="string">'path_to_image/Jennifer_Aniston_0003.jpg'</span>)</div></pre></td></tr></table></figure>
-<ol>
-<li>在Matlab运行extractDeepFeature.m-</li>
-</ol>
+<ul>
+<li>3.在Matlab运行extractDeepFeature.m-</li>
+</ul>
 
             <blockquote>
                 <p>
