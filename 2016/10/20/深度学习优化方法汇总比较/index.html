@@ -3,22 +3,32 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Edward | Technology Blog</title>
+  <title>深度学习优化方法汇总比较 | Edward | Technology Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="Android">
-  <meta name="description" content="Android,Caffe,Face Recognition">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Edward">
-<meta property="og:url" content="http://edwardchou.github.io/index.html">
+  <meta name="keywords" content="">
+  <meta name="description" content="##前言
+（标题不能再中二了）本文仅对一些常见的优化方法进行直观介绍和简单的比较，各种优化方法的详细内容及公式只好去认真啃论文了，在此我就不赘述了。
+##SGD
+此处的SGD指mini-batch gradient descent，关于batch gradient descent, stochastic gradient descent, 以及 mini-batch gradient descen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习优化方法汇总比较">
+<meta property="og:url" content="http://edwardchou.github.io/2016/10/20/深度学习优化方法汇总比较/index.html">
 <meta property="og:site_name" content="Edward">
-<meta property="og:description" content="Android,Caffe,Face Recognition">
+<meta property="og:description" content="##前言
+（标题不能再中二了）本文仅对一些常见的优化方法进行直观介绍和简单的比较，各种优化方法的详细内容及公式只好去认真啃论文了，在此我就不赘述了。
+##SGD
+此处的SGD指mini-batch gradient descent，关于batch gradient descent, stochastic gradient descent, 以及 mini-batch gradient descen">
+<meta property="og:updated_time" content="2016-10-20T07:33:03.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Edward">
-<meta name="twitter:description" content="Android,Caffe,Face Recognition">
+<meta name="twitter:title" content="深度学习优化方法汇总比较">
+<meta name="twitter:description" content="##前言
+（标题不能再中二了）本文仅对一些常见的优化方法进行直观介绍和简单的比较，各种优化方法的详细内容及公式只好去认真啃论文了，在此我就不赘述了。
+##SGD
+此处的SGD指mini-batch gradient descent，关于batch gradient descent, stochastic gradient descent, 以及 mini-batch gradient descen">
   
     <link rel="alternative" href="/atom.xml" title="Edward" type="application/atom+xml">
   
@@ -30,7 +40,7 @@
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
+  <nav id="menu" class="hide" >
    <div class="inner flex-row-vertical">
   <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
@@ -46,7 +56,7 @@
   </div>
   <ul class="nav flex-col">
     
-        <li class="waves-block waves-effect active">
+        <li class="waves-block waves-effect">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             主页
@@ -107,7 +117,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Edward</div>
+        <div class="flex-col header-title ellipsis">深度学习优化方法汇总比较</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -128,45 +138,78 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">Edward</h1>
+    <h1 class="author">深度学习优化方法汇总比较</h1>
     <h5 class="subtitle">
         
-        Technology Blog
+            <time datetime="2016-10-20T07:04:12.000Z" itemprop="datePublished" class="page-time">
+  2016-10-20
+</time>
+
+
         
     </h5>
   </div>
 </header>
 
     <div class="container body-wrap">
-      <ul class="post-list">
-  
-    <li class="post-list-item">
-        <article id="post-深度学习优化方法汇总比较" 
+      <article id="post-深度学习优化方法汇总比较" 
   class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/10/20/深度学习优化方法汇总比较/">深度学习优化方法汇总比较</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2016-10-20T07:04:12.000Z" itemprop="datePublished" class="post-time">
-  2016-10-20
-</time>
-
+    <div class="post-meat flex-row">
         
-
- 
     </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent" >
-    
-        <p>##前言</p>
+    <div class="post-body">
+        <aside class="post-widget" id="post-widget">
+
+            
+            <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+            
+
+            
+            <nav class="post-toc-wrap" id="post-toc">
+            
+            </nav>
+            
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent">
+            <p>##前言</p>
 <p>（标题不能再中二了）本文仅对一些常见的优化方法进行直观介绍和简单的比较，各种优化方法的详细内容及公式只好去认真啃论文了，在此我就不赘述了。</p>
 <p>##SGD</p>
 <p>此处的SGD指mini-batch gradient descent，关于batch gradient descent, stochastic gradient descent, 以及 mini-batch gradient descent的具体区别就不细说了。现在的SGD一般都指mini-batch gradient descent。</p>
@@ -248,56 +291,57 @@
 <p>引用</p>
 <p>[1]<a href="https://link.zhihu.com/?target=http%3A//www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf" target="_blank" rel="external">Adagrad</a><br>[2]<a href="https://link.zhihu.com/?target=http%3A//www.cs.toronto.edu/%7Etijmen/csc321/lecture_notes.shtml" target="_blank" rel="external">RMSprop[Lecture 6e]</a><br>[3]<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1212.5701" target="_blank" rel="external">Adadelta</a><br>[4]<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1412.6980v8" target="_blank" rel="external">Adam</a><br>[5]<a href="http://159.226.251.230/videoplayer/054_report.pdf?ich_u_r_i=e3605a9c53911b35bd50072bcace1bfa&amp;ich_s_t_a_r_t=0&amp;ich_e_n_d=0&amp;ich_k_e_y=1645108920750663512480&amp;ich_t_y_p_e=1&amp;ich_d_i_s_k_i_d=5&amp;ich_u_n_i_t=1" target="_blank" rel="external">Nadam</a><br>[6]<a href="https://link.zhihu.com/?target=http%3A//www.cs.toronto.edu/%7Efritz/absps/momentum.pdf" target="_blank" rel="external">On the importance of initialization and momentum in deep learning</a><br>[7]<a href="https://link.zhihu.com/?target=http%3A//keras-cn.readthedocs.io/en/latest/" target="_blank" rel="external">Keras中文文档</a><br>[8]<a href="https://link.zhihu.com/?target=https%3A//twitter.com/alecrad" target="_blank" rel="external">Alec Radford(图)</a><br>[9]<a href="https://link.zhihu.com/?target=http%3A//sebastianruder.com/optimizing-gradient-descent/" target="_blank" rel="external">An overview of gradient descent optimization algorithms</a><br>[10]<a href="https://link.zhihu.com/?target=http%3A//www.jmlr.org/proceedings/papers/v49/lee16.pdf" target="_blank" rel="external">Gradient Descent Only Converges to Minimizers</a><br>[11]<a href="https://link.zhihu.com/?target=http%3A//www.nature.com/nature/journal/v521/n7553/abs/nature14539.html" target="_blank" rel="external">Deep Learning:Nature</a></p>
 
-    
+            <blockquote>
+                <p>
+                本文地址：
+                <a href="http://edwardchou.github.io/2016/10/20/深度学习优化方法汇总比较/" target="_blank" rel="external">http://edwardchou.github.io/2016/10/20/深度学习优化方法汇总比较/</a>
+                </p>
+                <footer><cite><a href="http://edwardchou.github.io">@Edward</a></cite></footer>
+            </blockquote>
+            </div>
+            
+<nav class="post-nav">
+  
+
+  
+    <div class="waves-block waves-effect next fr">
+      <a href="/2016/07/20/hello-world/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Hello World</h4>
+      </a>
     </div>
-    
+  
+</nav>
+
+
+            
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="深度学习优化方法汇总比较" data-title="深度学习优化方法汇总比较" data-url="http://edwardchou.github.io/2016/10/20/深度学习优化方法汇总比较/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"edwardchou"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+        </div>
+    </div>
 </article>
-    </li>
-  
-    <li class="post-list-item">
-        <article id="post-hello-world" 
-  class="article article-type-post" itemprop="blogPost">
-     
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/07/20/hello-world/">Hello World</a>
-    </h3>
-  
-
-
-
-    <div class="post-meta">
-        <time datetime="2016-07-20T13:58:14.650Z" itemprop="datePublished" class="post-time">
-  2016-07-20
-</time>
-
-        
-
- 
-    </div>
-    
-    <div class="post-content" id="post-content" itemprop="postContent" >
-    
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-    
-    </div>
-    
-</article>
-    </li>
-  
-</ul>
-
     </div>
   </main>
 <div class="mask" id="mask"></div>
@@ -305,10 +349,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "Edward",
+    title: "深度学习优化方法汇总比较",
     pic: "/img/logo.jpg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://edwardchou.github.io/index.html"
+    url: "http://edwardchou.github.io/2016/10/20/深度学习优化方法汇总比较/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
