@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Edward</title>
-  <subtitle>Technology Blog</subtitle>
+  <subtitle>CV,Android,Face Recognition</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://edwardchou.github.io/"/>
