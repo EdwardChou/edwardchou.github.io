@@ -20,7 +20,7 @@ SGD此处的SGD指mini-batch gradient descent，关于batch gradient descent, st
 SGD此处的SGD指mini-batch gradient descent，关于batch gradient descent, stochastic gradient descent, 以及 mini-batch gradient descent的具体区别">
 <meta property="og:image" content="https://zhihu.com/equation?tex=g_t%3D%5Cnabla_%7B%5Ctheta_%7Bt-1%7D%7D%7Bf%28%5Ctheta_%7Bt-1%7D%29%7D">
 <meta property="og:image" content="https://zhihu.com/equation?tex=%5CDelta%7B%5Ctheta_t%7D%3D-%5Ceta%2Ag_t">
-<meta property="og:updated_time" content="2016-10-20T07:53:18.071Z">
+<meta property="og:updated_time" content="2016-10-20T07:54:20.948Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度学习优化方法汇总比较">
 <meta name="twitter:description" content="前言（标题不能再中二了）本文仅对一些常见的优化方法进行直观介绍和简单的比较，各种优化方法的详细内容及公式只好去认真啃论文了，在此我就不赘述了。
@@ -208,9 +208,7 @@ SGD此处的SGD指mini-batch gradient descent，关于batch gradient descent, st
             <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>（标题不能再中二了）本文仅对一些常见的优化方法进行直观介绍和简单的比较，各种优化方法的详细内容及公式只好去认真啃论文了，在此我就不赘述了。</p>
 <h2 id="SGD"><a href="#SGD" class="headerlink" title="SGD"></a>SGD</h2><p>此处的SGD指mini-batch gradient descent，关于batch gradient descent, stochastic gradient descent, 以及 mini-batch gradient descent的具体区别就不细说了。现在的SGD一般都指mini-batch gradient descent。</p>
-<p>SGD就是每一次迭代计算mini-batch的梯度，然后对参数进行更新，是最常见的优化方法了。即：</p>
-<p><img src="https://zhihu.com/equation?tex=g_t%3D%5Cnabla_%7B%5Ctheta_%7Bt-1%7D%7D%7Bf%28%5Ctheta_%7Bt-1%7D%29%7D" alt="alt text"><br><img src="https://zhihu.com/equation?tex=%5CDelta%7B%5Ctheta_t%7D%3D-%5Ceta%2Ag_t" alt="alt text"></p>
-<p>其中，是学习率，是梯度 SGD完全依赖于当前batch的梯度，所以可理解为允许当前batch的梯度多大程度影响参数更新</p>
+<p>SGD就是每一次迭代计算mini-batch的梯度，然后对参数进行更新，是最常见的优化方法了。即：<br><img src="https://zhihu.com/equation?tex=g_t%3D%5Cnabla_%7B%5Ctheta_%7Bt-1%7D%7D%7Bf%28%5Ctheta_%7Bt-1%7D%29%7D" alt="alt text"> <img src="https://zhihu.com/equation?tex=%5CDelta%7B%5Ctheta_t%7D%3D-%5Ceta%2Ag_t" alt="alt text"><br>其中，是学习率，是梯度 SGD完全依赖于当前batch的梯度，所以可理解为允许当前batch的梯度多大程度影响参数更新</p>
 <p><strong>缺点：</strong>（正因为有这些缺点才让这么多大神发展出了后续的各种算法）</p>
 <ul>
 <li>选择合适的learning rate比较困难 - 对所有的参数更新使用同样的learning rate。对于稀疏数据或者特征，有时我们可能想更新快一些对于不经常出现的特征，对于常出现的特征更新慢一些，这时候SGD就不太能满足要求了</li>
